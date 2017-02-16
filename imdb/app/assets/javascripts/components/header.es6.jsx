@@ -12,7 +12,6 @@ class Header extends React.Component {
     url: `/movies/search/${query}`,
     data: {query}
   }).done(response => {
-    console.log(response)
     debugger;
     this.props.searchResults(response);
     document.getElementById('search').value = '';
