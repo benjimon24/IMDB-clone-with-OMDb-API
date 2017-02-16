@@ -1,0 +1,23 @@
+<h1><%=@parsed_response["Title"] %></h1>
+<div>
+  <img class="poster" src="<%=@parsed_response["Poster"]%>" />
+</div>
+<ul>
+  <li>Directed By: <%=@parsed_response["Director"] %></li>
+  <li>Written By: <%=@parsed_response["Writer"] %></li>
+  <li>Starring: <%=@parsed_response["Actors"] %></li>
+  <li>Rated: <%=@parsed_response["Rated"] %></li>
+  <li>Runtime: <%=@parsed_response["Runtime"] %></li>
+  <li>Genre: <%=@parsed_response["Genre"] %></li>
+</ul>
+
+<h2>Plot</h2>
+<p> <%=@parsed_response["Plot"] %></p>
+
+<h2>Reception</h2>
+  <li>Nominations: <%=@parsed_response["Awards"] %></li>
+  <li>Metascore: <%=@parsed_response["Metascore"] %></li>
+  <li>imdb Rating: <%=@parsed_response["imdbRating"] %></li>
+  <li>imdb Votes: <%=@parsed_response["imdbVotes"] %></li>
+
+<a href="/">Go Back</a>

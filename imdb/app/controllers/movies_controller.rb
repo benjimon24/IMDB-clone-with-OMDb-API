@@ -6,7 +6,6 @@ class MoviesController < ApplicationController
     root = "http://www.omdbapi.com/?s=#{params[:query]}&r=json"
     response = Net::HTTP.get(URI(root))
     parsed_response = JSON.parse(response)["Search"]
-    # binding.pry
     if parsed_response
       render json: parsed_response
     else
@@ -14,4 +13,9 @@ class MoviesController < ApplicationController
     end
   end
 
+  def show
+    root = "http://www.omdbapi.com/?i=#{params[:movie_id]}&r=json"
+    response = Net::HTTP.get(URI(root))
+    @parsed_response = JSON.parse(response)
+  end
 end
