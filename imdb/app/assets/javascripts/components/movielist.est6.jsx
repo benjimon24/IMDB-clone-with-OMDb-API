@@ -1,6 +1,4 @@
 class MovieList extends React.Component {
-
-
   render() {
     let movies = this.props.movies
     return (
