@@ -30,6 +30,7 @@ class Header extends React.Component {
       document.getElementById('search').value = '';
     }).fail(error =>{
       alert("Sorry! We could not find any matching search results.")
+      document.getElementById('search').value = '';
     })//.bind(this))
   }
 
