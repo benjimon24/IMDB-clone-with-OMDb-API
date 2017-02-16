@@ -11,10 +11,6 @@ class Page extends React.Component {
     this.setState({movies: results})
   }
 
-  // clear() {
-  //   this.setState({movies: []})
-  // }
-
   render() {
     return (
       <div>
