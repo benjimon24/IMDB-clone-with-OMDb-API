@@ -28,7 +28,9 @@ class Header extends React.Component {
     }).done(response=>{
       this.props.searchResults(response.Search);
       document.getElementById('search').value = '';
-    }) //.bind(this))
+    }).fail(error =>{
+      alert("Sorry! We could not find any matching search results.")
+    })//.bind(this))
   }
 
   render() {
