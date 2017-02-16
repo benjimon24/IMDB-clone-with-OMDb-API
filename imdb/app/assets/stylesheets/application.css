@@ -1,0 +1,66 @@
+html {
+  font-family: Helvetica;
+  background-image: url("http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/10/tfa_poster_wide_header-1536x864-959818851016.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#search-form {
+  margin: auto;
+  width: 206px;
+  /*border: 5px solid CornflowerBlue;*/
+}
+
+#search {
+  display: inline-block;
+  margin: auto;
+  height: 30px;
+  font-size: 18px;
+  width: 200px;
+  border: none;
+  background-color: rgba(75,75,75,0.7);
+  color: white;
+  padding: 10px;
+}
+
+#search-form:hover {
+}
+
+.movie-list {
+text-align: center;
+}
+
+.movie {
+  padding: 10px;
+  /*border: 1px solid black;*/
+  display: inline-block;
+  vertical-align: top;
+  height: 518px;
+  margin: 10px;
+  background-color: rgba(0,0,0,.75);
+  color: white;
+}
+
+.show-movie{
+  background-color: rgba(0,0,0,.75);
+  color: white;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 720px;
+  padding: 30px;
+}
+
+#go-back {
+  color: white;
+  float: right;
+  /*text-align: left;*/
+}
+
+#go-back:visited{
+  color: grey;
+}
+li {
+  list-style: none;
+}
