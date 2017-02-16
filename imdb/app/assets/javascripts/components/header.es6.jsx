@@ -28,7 +28,7 @@ class Header extends React.Component {
     }).done(response=>{
       this.props.searchResults(response.Search);
       document.getElementById('search').value = '';
-    }.bind(this))
+    }) //.bind(this))
   }
 
   render() {
