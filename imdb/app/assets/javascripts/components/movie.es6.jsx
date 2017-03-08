@@ -1,18 +1,41 @@
 class Movie extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      data: {},
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  componentDidMount(){
+    this.setState({data: this.props.movie})
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: "http://www.omdbapi.com/?i=" + this.state.data.imdbID,
+    }).done(response=>{
+      $('.show-movie').show();
+      this.props.displayMovie(response);
+    }.bind(this))
+  }
+
   render() {
     let movieData = this.props.movie
-    // {"poster": 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SX300.jpg', "title": "Batman", "year": "2017", "rating": "10/10", "plot": "Joyce bullies Ben"};
-    let link = `/movies/${movieData.imdbID}`
     return (
       <li className="movie">
+        <a onClick={this.handleClick}>
           <div className="movie-content">
-            <p>
-              <a href={link}><img className ="poster" src={movieData.Poster} /></a> <br />
+            <img className="poster" src={movieData.Poster} />
+            <div className="movieInfo">
               <span className="title">{movieData.Title}</span> <br />
               <span className="year">{movieData.Year}</span> <br />
-            </p>
+            </div>
           </div>
-        </li>
+        </a>
+      </li>
     );
   };
 }

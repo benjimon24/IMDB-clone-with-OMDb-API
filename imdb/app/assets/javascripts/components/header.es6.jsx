@@ -4,33 +4,20 @@ class Header extends React.Component {
   this.handleSubmit = this.handleSubmit.bind(this);
 }
 
-//   handleSubmit(event) {
-//   event.preventDefault();
-//   let query = this.refs.content.value;
-//
-//   $.ajax({
-//     url: `/movies/search/${query}`,
-//     data: {query}
-//   }).done(response => {
-//     this.props.searchResults(response);
-//     document.getElementById('search').value = '';
-//   }).fail(error => {
-//       alert("We couldn't find any matching search results")
-//   })
-// }
-
   handleSubmit(event) {
     event.preventDefault();
     let query = this.refs.content.value;
-    url = "http://www.omdbapi.com/?s=" + query;
+    let url = "http://www.omdbapi.com/?s=" + query;
     $.ajax({
       url: url,
     }).done(response=>{
       this.props.searchResults(response.Search);
       document.getElementById('search').value = '';
+      $('.show-movie').hide();
     }).fail(error =>{
       alert("Sorry! We could not find any matching search results.")
-    })//.bind(this))
+      document.getElementById('search').value = '';
+    })
   }
 
   render() {

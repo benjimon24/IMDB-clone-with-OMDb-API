@@ -1,16 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Helvetica;
-  background-image: url("http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/10/tfa_poster_wide_header-1536x864-959818851016.jpg");
-  /*background-image: url("http://static1.squarespace.com/static/5554afd4e4b03e9b3e7c0a44/55707a0ce4b072236bd945cd/55707aa9e4b072236bd968df/1431192639000/i2xmhay.jpg");*/
+  /*background-image: url("http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/10/tfa_poster_wide_header-1536x864-959818851016.jpg");*/
+  background-image: url("http://static1.squarespace.com/static/5554afd4e4b03e9b3e7c0a44/55707a0ce4b072236bd945cd/55707aa9e4b072236bd968df/1431192639000/i2xmhay.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
 }
 
 #search-form {
   margin: auto;
   width: 206px;
-  /*border: 5px solid CornflowerBlue;*/
 }
 
 #search {
@@ -29,40 +32,85 @@ html {
 }
 
 .movie-list {
-text-align: center;
+  /*text-align: center;*/
+  display: inline-block;
+  width: 500px;
 }
 
+.movie-list ul {
+  /*display: inline-block;*/
+  padding: 0px;
+}
+
+/*individual block of the movie list*/
 .movie {
   padding: 10px;
-  /*border: 1px solid black;*/
   display: inline-block;
   vertical-align: top;
-  height: 518px;
-  width: 324px;
+  min-height: 80px;
+  width: 450px;
   margin: 10px;
   background-color: rgba(0,0,0,.75);
   color: white;
 }
 
+.movie:hover {
+  background-color: rgba(25,25,25,.75);
+  cursor: pointer;
+}
+
+/* thumbnail of the movie poster*/
+.poster {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+/*displays the title and the release date of the movie*/
+.movieInfo {
+  display: inline-block;
+  vertical-align: top;
+  width: 350px;
+}
+
+.title:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+/* displays full information about the movie */
 .show-movie{
+  display: none;
   background-color: rgba(0,0,0,.75);
   color: white;
-  display: block;
-  margin: 0 auto;
   text-align: center;
-  width: 720px;
+  width: 400px;
+  margin-top: 25px;
   padding: 30px;
+}
+
+.year {
+  color: grey;
+  font-size: 80%;
 }
 
 #go-back {
   color: white;
   float: right;
-  /*text-align: left;*/
 }
 
 #go-back:visited{
   color: grey;
 }
+
 li {
   list-style: none;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
