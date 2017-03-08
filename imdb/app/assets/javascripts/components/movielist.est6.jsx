@@ -4,7 +4,8 @@ class MovieList extends React.Component {
     return (
       <section className="movie-list">
         <ul>
-          {this.props.movies.map((movie, i) => {return <Movie movie={movie} key={i} />})}
+          {this.props.movies.map((movie) => {
+            return <Movie movie={movie} displayMovie={this.props.displayMovie} key={movie.imdbID} />})}
         </ul>
       </section>
 

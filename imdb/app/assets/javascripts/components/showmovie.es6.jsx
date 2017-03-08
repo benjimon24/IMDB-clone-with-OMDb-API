@@ -1,12 +1,12 @@
 class ShowMovie extends React.Component {
   render(){
-      let movieData = this.props.movie
+    let movieData = this.props.movie
 
     return (
       <div className="show-movie">
         <h1>{movieData.Title}</h1>
         <div>
-          <img className="poster" src={movieData.Poster} />
+          <img className="full-poster" src={movieData.Poster} />
         </div>
         <ul>
           <li>Directed By: {movieData.Director} </li>
@@ -26,7 +26,6 @@ class ShowMovie extends React.Component {
         <li>imdb Rating: {movieData.imdbRating} </li>
         <li>imdb Votes: {movieData.imdbVotes} </li>
 
-        <a id="go-back" href="/">Go Back</a>
       </div>
     )
   }

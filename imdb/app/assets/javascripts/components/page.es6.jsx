@@ -2,20 +2,29 @@ class Page extends React.Component {
   constructor() {
     super();
     this.state = {
-      movies: []
-    }
-    this.searchResults = this.searchResults.bind(this)
+      movies: [],
+      movie: {}
+    };
+    this.searchResults = this.searchResults.bind(this);
+    this.displayMovie = this.displayMovie.bind(this);
   }
-
+ 
   searchResults(results) {
     this.setState({movies: results})
+  }
+
+  displayMovie(result){
+    this.setState({movie: result})
   }
 
   render() {
     return (
       <div>
         <Header searchResults={this.searchResults}/>
-        <MovieList movies={this.state.movies}/>
+        <div className="result">
+          <MovieList movies={this.state.movies} displayMovie={this.displayMovie}/>
+          <ShowMovie movie={this.state.movie}/>
+        </div>
       </div>
     )
   }
