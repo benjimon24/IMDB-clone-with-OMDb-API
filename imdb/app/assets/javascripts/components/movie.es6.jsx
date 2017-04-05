@@ -15,7 +15,7 @@ class Movie extends React.Component {
     event.preventDefault();
 
     $.ajax({
-      url: "http://www.omdbapi.com/?i=" + this.state.data.imdbID,
+      url: "https://www.omdbapi.com/?i=" + this.state.data.imdbID,
     }).done(response=>{
       $('.show-movie').show();
       this.props.displayMovie(response);
