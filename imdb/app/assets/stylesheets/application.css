@@ -6,30 +6,29 @@ html {
   font-family: Helvetica;
   background: url("http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/10/tfa_poster_wide_header-1536x864-959818851016.jpg") no-repeat fixed center;
   background-size: cover;
-  /*background-image: url("http://static1.squarespace.com/static/5554afd4e4b03e9b3e7c0a44/55707a0ce4b072236bd945cd/55707aa9e4b072236bd968df/1431192639000/i2xmhay.jpg");*/
 }
 
 li {
   list-style: none;
 }
 
-.movie-list {
-  display: inline-block;
-  width: 500px;
+h2 {
+  text-decoration: underline;
 }
 
-.movie-list ul {
-  padding: 0px;
+.movie-list {
+  display: inline-block;
+  max-width: 500px;
+  margin-right: 10px;
 }
 
 /*individual block of the movie list*/
 .movie {
   padding: 10px;
-  display: inline-block;
+  display: block;
   vertical-align: top;
   min-height: 80px;
-  width: 450px;
-  margin: 10px;
+  margin-bottom: 10px;
   background-color: rgba(0,0,0,.75);
   color: white;
 }
@@ -52,7 +51,6 @@ li {
 .movieInfo {
   display: inline-block;
   vertical-align: top;
-  width: 350px;
 }
 
 .title:hover {
@@ -65,10 +63,14 @@ li {
   display: none;
   background-color: rgba(0,0,0,.75);
   color: white;
-  text-align: center;
+  text-align: left;
+  margin: 15px 0px 0px 10px;
   width: 400px;
-  margin-top: 25px;
   padding: 30px;
+}
+
+.show-movie > h1 {
+  text-align: center;
 }
 
 .year {
@@ -82,9 +84,14 @@ li {
   justify-content: center;
 }
 
+.label {
+  color: #7D7D7D;
+}
+
 #search-form {
   margin: auto;
   width: 206px;
+  margin-bottom: 25px;
 }
 
 #search {
@@ -110,4 +117,18 @@ li {
 
 #go-back:visited{
   color: grey;
+}
+
+@media only screen and (max-width: 650px) {
+  .result {
+    flex-direction: column-reverse;
+  }
+  .show-movie{
+    margin: auto;
+  }
+
+  .movie-list {
+    margin: auto;
+  }
+
 }

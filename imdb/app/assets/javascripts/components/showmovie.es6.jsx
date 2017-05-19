@@ -8,23 +8,21 @@ class ShowMovie extends React.Component {
         <div>
           <img className="full-poster" src={movieData.Poster} />
         </div>
-        <ul>
-          <li>Directed By: {movieData.Director} </li>
-          <li>Written By: {movieData.Writer} </li>
-          <li>Starring: {movieData.Actors} </li>
-          <li>Rated: {movieData.Rated} </li>
-          <li>Runtime: {movieData.Runtime} </li>
-          <li>Genre: {movieData.Genre} </li>
-        </ul>
+        <li><span className="label">Directed By:</span> {movieData.Director} </li>
+        <li><span className="label">Written By:</span> {movieData.Writer} </li>
+        <li><span className="label">Starring:</span> {movieData.Actors} </li>
+        <li><span className="label">Rated:</span> {movieData.Rated} </li>
+        <li><span className="label">Runtime:</span> {movieData.Runtime} </li>
+        <li><span className="label">Genre:</span> {movieData.Genre} </li>
 
         <h2>Plot</h2>
         <p> {movieData.Plot} </p>
 
         <h2>Reception</h2>
-        <li>Nominations: {movieData.Awards} </li>
-        <li>Metascore: {movieData.Metascore} </li>
-        <li>imdb Rating: {movieData.imdbRating} </li>
-        <li>imdb Votes: {movieData.imdbVotes} </li>
+        <li><span className="label">Nominations:</span> {movieData.Awards} </li>
+        <li><span className="label">Metascore:</span> {movieData.Metascore} </li>
+        <li><span className="label">imdb Rating:</span> {movieData.imdbRating} </li>
+        <li><span className="label">imdb Votes:</span> {movieData.imdbVotes} </li>
 
       </div>
     )

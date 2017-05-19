@@ -24,7 +24,7 @@ class Header extends React.Component {
     return (
       <header>
         <form id="search-form" onSubmit={this.handleSubmit}>
-          <input ref='content' id="search" type="text" name="query" placeholder="Search by Title" />
+          <input ref='content' id="search" type="text" name="query" placeholder="Search by Movie Title" />
         </form>
       </header>
     )

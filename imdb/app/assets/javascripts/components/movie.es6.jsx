@@ -17,7 +17,7 @@ class Movie extends React.Component {
     $.ajax({
       url: "https://www.omdbapi.com/?i=" + this.state.data.imdbID,
     }).done(response=>{
-      $('.show-movie').show();
+      $('.show-movie').css("display", "inline-block");
       this.props.displayMovie(response);
     }.bind(this))
   }
