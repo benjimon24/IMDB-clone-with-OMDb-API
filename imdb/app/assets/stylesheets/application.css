@@ -94,8 +94,13 @@ li {
   font-size: 18px;
   width: 200px;
   border: none;
+  color: white;
   background-color: rgba(75,75,75,0.7);
   padding: 10px;
+}
+
+#search::placeholder {
+  color: #BEBEBE;
 }
 
 #go-back {
