@@ -4,41 +4,21 @@
 
 html {
   font-family: Helvetica;
-  /*background-image: url("http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/10/tfa_poster_wide_header-1536x864-959818851016.jpg");*/
-  background-image: url("http://static1.squarespace.com/static/5554afd4e4b03e9b3e7c0a44/55707a0ce4b072236bd945cd/55707aa9e4b072236bd968df/1431192639000/i2xmhay.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-attachment: fixed;
+  background: url("http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/10/tfa_poster_wide_header-1536x864-959818851016.jpg") no-repeat fixed center;
+  background-size: cover;
+  /*background-image: url("http://static1.squarespace.com/static/5554afd4e4b03e9b3e7c0a44/55707a0ce4b072236bd945cd/55707aa9e4b072236bd968df/1431192639000/i2xmhay.jpg");*/
 }
 
-#search-form {
-  margin: auto;
-  width: 206px;
-}
-
-#search {
-  display: inline-block;
-  margin: auto;
-  height: 30px;
-  font-size: 18px;
-  width: 200px;
-  border: none;
-  background-color: rgba(75,75,75,0.7);
-  color: white;
-  padding: 10px;
-}
-
-#search-form:hover {
+li {
+  list-style: none;
 }
 
 .movie-list {
-  /*text-align: center;*/
   display: inline-block;
   width: 500px;
 }
 
 .movie-list ul {
-  /*display: inline-block;*/
   padding: 0px;
 }
 
@@ -96,6 +76,28 @@ html {
   font-size: 80%;
 }
 
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#search-form {
+  margin: auto;
+  width: 206px;
+}
+
+#search {
+  display: inline-block;
+  margin: auto;
+  height: 30px;
+  font-size: 18px;
+  width: 200px;
+  border: none;
+  background-color: rgba(75,75,75,0.7);
+  padding: 10px;
+}
+
 #go-back {
   color: white;
   float: right;
@@ -103,14 +105,4 @@ html {
 
 #go-back:visited{
   color: grey;
-}
-
-li {
-  list-style: none;
-}
-
-.result {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
