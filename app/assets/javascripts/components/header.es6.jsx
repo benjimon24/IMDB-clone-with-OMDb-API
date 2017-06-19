@@ -4,21 +4,29 @@ class Header extends React.Component {
   this.handleSubmit = this.handleSubmit.bind(this);
 }
 
+  // handleSubmit(event) {
+  //   event.preventDefault();
+  //   let query = this.refs.content.value;
+  //   let url = "https://www.omdbapi.com/?s=" + query;
+  //   $.ajax({
+  //     url: url,
+  //   }).done(response=>{
+  //     this.props.searchResults(response.Search);
+  //     document.getElementById('search').value = '';
+  //     $('.show-movie').hide();
+  //   }).fail(error =>{
+  //     alert("Sorry! We could not find any matching search results.")
+  //     document.getElementById('search').value = '';
+  //   })
+  // }
+
   handleSubmit(event) {
     event.preventDefault();
-    let query = this.refs.content.value;
-    let url = "https://www.omdbapi.com/?s=" + query;
-    $.ajax({
-      url: url,
-    }).done(response=>{
-      this.props.searchResults(response.Search);
-      document.getElementById('search').value = '';
-      $('.show-movie').hide();
-    }).fail(error =>{
-      alert("Sorry! We could not find any matching search results.")
-      document.getElementById('search').value = '';
-    })
-  }
+    this.props.searchResults([{},{},{}]);
+    document.getElementById('search').value = '';
+    $('.show-movie').hide();
+    }
+
 
   render() {
     return (

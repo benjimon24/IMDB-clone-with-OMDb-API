@@ -11,19 +11,36 @@ class Movie extends React.Component {
     this.setState({data: this.props.movie})
   }
 
+  // handleClick(event) {
+  //   event.preventDefault();
+  //
+  //   $.ajax({
+  //     url: "https://www.omdbapi.com/?i=" + this.state.data.imdbID,
+  //   }).done(response=>{
+  //     $('.show-movie').css("display", "inline-block");
+  //     this.props.displayMovie(response);
+  //   }.bind(this))
+  // }
+
   handleClick(event) {
     event.preventDefault();
-
-    $.ajax({
-      url: "https://www.omdbapi.com/?i=" + this.state.data.imdbID,
-    }).done(response=>{
+    //
+    // $.ajax({
+    //   url: "https://www.omdbapi.com/?i=" + this.state.data.imdbID,
+    // }).done(response=>{
       $('.show-movie').css("display", "inline-block");
-      this.props.displayMovie(response);
-    }.bind(this))
+      this.props.displayMovie({});
+    // }.bind(this))
   }
 
   render() {
-    let movieData = this.props.movie
+    // let movieData = this.props.movie
+    let movieData = {
+      Poster: "http://t0.gstatic.com/images?q=tbn:ANd9GcQ0S5JQhVplHbw7O6nt7Q0r23Bssl9UNzC-z3zy1r45_eLUB43l",
+      Title: "Rogue One",
+      Year: "2016"
+    }
+
     return (
       <li className="movie">
         <a onClick={this.handleClick}>

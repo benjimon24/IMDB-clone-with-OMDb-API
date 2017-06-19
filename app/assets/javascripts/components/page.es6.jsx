@@ -9,8 +9,8 @@ class Page extends React.Component {
     this.displayMovie = this.displayMovie.bind(this);
   }
 
-  searchResults(results) {
-    this.setState({movies: results})
+  searchResults(result) {
+    this.setState({movies: result})
   }
 
   displayMovie(result){
