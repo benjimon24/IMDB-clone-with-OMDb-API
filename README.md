@@ -2,7 +2,7 @@
 
 This is a movie aggregator application created with Rails and React.
 * Ruby version: 2.3.1
-* Uses OMDB Api (As of May 2017, this API has gone private and the key has expired)
+* Uses OMDB Api
 
 User Stories:
 * I would like to search for movies and see information about them
