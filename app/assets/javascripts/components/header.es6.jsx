@@ -7,7 +7,7 @@ class Header extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     let query = this.refs.content.value;
-    let url = "https://www.omdbapi.com/?s=" + query + "&apikey=a68d4e1d";
+    let url = "https://www.omdbapi.com/?s=" + query + "&apikey=4b804138";
     $.ajax({
       url: url,
     }).done(response=>{
