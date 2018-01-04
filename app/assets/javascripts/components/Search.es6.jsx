@@ -1,4 +1,4 @@
-class Header extends React.Component {
+class Search extends React.Component {
   constructor() {
   super();
   this.handleSubmit = this.handleSubmit.bind(this);
@@ -11,7 +11,7 @@ class Header extends React.Component {
     $.ajax({
       url: url,
     }).done(response=>{
-      this.props.searchResults(response.Search);
+      this.props.handleSearch(response.Search);
       document.getElementById('search').value = '';
       $('.show-movie').hide();
     }).fail(error =>{
@@ -22,11 +22,11 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
+      <div>
         <form id="search-form" onSubmit={this.handleSubmit}>
           <input ref='content' id="search" type="text" name="query" placeholder="Search by Movie Title" />
         </form>
-      </header>
+      </div>
     )
   }
 }

@@ -1,4 +1,4 @@
-class Movie extends React.Component {
+class MovieCard extends React.Component {
   constructor(){
     super();
     this.state = {
